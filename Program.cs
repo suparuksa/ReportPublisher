@@ -4,6 +4,7 @@ using FastReport;
 using FastReport.Export.PdfSimple;
 using dotNetFastReport.Database;
 using dotNetFastReport.Util;
+using dotNetFastReport.Dmo;
 
 
 namespace dotNetFastReport
@@ -29,14 +30,14 @@ namespace dotNetFastReport
             Report report = new Report();
             try
             {
-                var _reportdatasetcreator = new DataSetCreator();
+                var _reportdatasetcreator = new DataSetCreator(new mots_dat_invoice_dmo());
                 var dataSet = _reportdatasetcreator.CreateReportDataSet();
 
-                report.Load($@"{inFolder}\test.frx");
+                report.Load($@"{inFolder}\mots_frm_invoice.frx");
                 report.RegisterData(dataSet);
                 report.Prepare();
 
-                report.Export(new PDFSimpleExport(), $@"{outFolder}\test.pdf");
+                report.Export(new PDFSimpleExport(), $@"{outFolder}\mots_invoice.pdf");
 
             }
             catch(Exception ex)

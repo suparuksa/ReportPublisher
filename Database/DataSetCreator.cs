@@ -5,6 +5,8 @@ using System.IO;
 using System.Data;
 using Dapper;
 using dotNetFastReport.Model;
+using dotNetFastReport.Dmo;
+using dotNetFastReport.Interface;
 
 namespace dotNetFastReport.Database
 {
@@ -13,29 +15,50 @@ namespace dotNetFastReport.Database
     public partial class DataSetCreator
     {
         private readonly DataSet _reportDataSet;
-        private readonly DataTable _reportDataTable;
+        private readonly ITableDmo _reportDmo;
 
-        public DataSetCreator()
+        public DataSetCreator(ITableDmo reportDmo)
         {
             _reportDataSet = new DataSet();
-            _reportDataTable = new DataTable();
+            _reportDmo = reportDmo;
         }
         public DataSet CreateReportDataSet()
         {
-
-            _reportDataTable.TableName = "report_datas";
-            _reportDataTable.Columns.Add("id", typeof(int));
-            _reportDataTable.Columns.Add("report_name", typeof(string));
-            _reportDataTable.Columns.Add("report_data", typeof(string));
-
+           var _reportDataTable = _reportDmo.GetDataTable();
+            
             var connection_string = @"Server=SPBNB\SQL2019DEV;Database=develop;Trusted_Connection=True;";
             using (var sqlconnect = new SqlConnection(connection_string))
             {
 
-                var allReportDatas = sqlconnect.Query<report_datas>("SELECT id, report_name, report_data From report_datas");
-                foreach (var report_data in allReportDatas)
+                var allRows = sqlconnect.Query<mots_dat_invoice>(_reportDmo.GetSelectCommand());
+                foreach (var row in allRows)
                 {
-                    _reportDataTable.Rows.Add(report_data.id, report_data.report_name, report_data.report_data);
+                    /*
+                    _reportDataTable.Rows.Add(
+                        row.id, 
+                        row.report_name, 
+                        row.report_data
+                    );
+                    */
+
+                    _reportDataTable.Rows.Add(
+                            row.invoice_no,
+                            row.invoice_date,
+                            row.ref1,
+                            row.ref2,
+                            row.due_date,
+                            row.airline_company,
+                            row.airline_branch,
+                            row.airline_taxid,
+                            row.airline_telno,
+                            row.airline_address,
+                            row.detail_item,
+                            row.detail_item_price,
+                            row.detail_total_baht,
+                            row.detail_total_price
+                            );
+
+
                 }
 
             }
