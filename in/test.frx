@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="04/04/2022 12:29:15" ReportInfo.Modified="04/05/2022 09:36:41" ReportInfo.CreatorVersion="2022.2.0.0">
+  <Dictionary>
+    <XmlDataConnection Name="Connection" ConnectionString="rijcmlqC6oN+L0qlK1mXsjlHM8Kwmx2ugI7dkQG7XAa4zYuq9VKB+WV1Gc4gXB2eVtNadtdAXoFi1vfIshxMi5ROyd0PETHJnj++1tFEPDkR0pbozuo5IAh4Y3mHLXsQr4DlO3L">
+      <TableDataSource Name="report_datas" DataType="System.Int32" PropName="DATA_RECORD" Enabled="true" TableName="report_datas">
+        <Column Name="id" DataType="System.String"/>
+        <Column Name="report_name" DataType="System.String"/>
+        <Column Name="report_data" DataType="System.String"/>
+      </TableDataSource>
+    </XmlDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="85.05"/>
+    <PageHeaderBand Name="PageHeader1" Top="89.05" Width="718.2" Height="134">
+      <TextObject Name="Text5" Left="198.45" Width="94.5" Height="18.9" Text="id" Font="Arial, 10pt"/>
+      <TextObject Name="Text6" Left="302.4" Width="94.5" Height="18.9" Text="report_name" Font="Arial, 10pt"/>
+      <TextObject Name="Text7" Left="406.35" Width="94.5" Height="18.9" Text="report_data" Font="Arial, 10pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="227.05" Width="718.2" Height="276.5" DataSource="report_datas">
+      <TextObject Name="Text2" Left="189" Top="66.15" Width="94.5" Height="18.9" Text="[report_datas.id]" Font="Arial, 10pt"/>
+      <TextObject Name="Text3" Left="292.95" Top="66.15" Width="94.5" Height="18.9" Text="[report_datas.report_name]" Font="Arial, 10pt"/>
+      <TextObject Name="Text4" Left="396.9" Top="66.15" Width="94.5" Height="18.9" Text="[report_datas.report_data]" Font="Arial, 10pt"/>
+      <BarcodeObject Name="Barcode1" Left="519.75" Width="164" Height="182" Text="[report_datas.id][report_datas.report_name][report_datas.report_data]" AllowExpressions="true" Barcode="QR Code" Barcode.ErrorCorrection="L" Barcode.Encoding="UTF8" Barcode.QuietZone="true"/>
+      <BarcodeObject Name="Barcode2" Left="170.1" Top="94.5" Width="346.25" Height="94.5" Text="12345678[report_datas.id]" AllowExpressions="true" Barcode="Code128" Barcode.AutoEncode="true"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="507.55" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!DOCTYPE report_datas [
+  <!ELEMENT report_datas (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (id?,report_name?,report_data?)+>
+  <!ELEMENT id (#PCDATA)>
+  <!ELEMENT report_name (#PCDATA)>
+  <!ELEMENT report_data (#PCDATA)>
+]>
+<report_datas>
+  <DATA_RECORD>
+    <id>1</id>
+    <report_name>test1</report_name>
+    <report_data>test1</report_data>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <id>2</id>
+    <report_name>test2</report_name>
+    <report_data>test2</report_data>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <id>3</id>
+    <report_name>test3</report_name>
+    <report_data>test3</report_data>
+  </DATA_RECORD>
+</report_datas>
