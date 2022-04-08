@@ -1,10 +1,10 @@
 ﻿using System.Data.SqlClient;
 using System.Data;
 using Dapper;
-using dotNetFastReport.Model;
-using dotNetFastReport.Interface;
+using ReportPublisher.Model;
+using ReportPublisher.Interface;
 
-namespace dotNetFastReport.Database
+namespace ReportPublisher.Database
 {
     public partial class DataSetCreator<T> where T : ModelBase
     {

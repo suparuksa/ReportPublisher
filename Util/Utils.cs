@@ -4,7 +4,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 
-namespace dotNetFastReport.Util
+namespace ReportPublisher.Util
 {
     public static class Utils
     {

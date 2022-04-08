@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
-using dotNetFastReport.Interface;
+using ReportPublisher.Interface;
 
-namespace dotNetFastReport.Dmo
+namespace ReportPublisher.Dmo
 {
     public class MotsInvoiceItemsDmo : ITableDmo
     {

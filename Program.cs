@@ -2,20 +2,17 @@
 using System.IO;
 using FastReport;
 using FastReport.Export.PdfSimple;
-using dotNetFastReport.Database;
-using dotNetFastReport.Dmo;
-using dotNetFastReport.Model;
-using dotNetFastReport.Util;
+using ReportPublisher.Database;
+using ReportPublisher.Dmo;
+using ReportPublisher.Model;
+using ReportPublisher.Util;
 
 
-namespace dotNetFastReport
+namespace ReportPublisher
 {
 
     class Program
     {
-       // private readonly string outFolder = @"..\..\..\out\";
-        //private readonly string inFolder = @"..\..\..\in\";
-
         static void Main(string[] args)
         {
 
