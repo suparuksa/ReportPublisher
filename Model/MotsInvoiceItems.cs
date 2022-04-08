@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace dotNetFastReport.Model
+namespace ReportPublisher.Model
 {
     public class MotsInvoiceItems : ModelBase
 	{

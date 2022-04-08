@@ -5,7 +5,7 @@ using System.IO;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace dotNetFastReport.Util
+namespace ReportPublisher.Util
 {
     public class ReportManager
     {

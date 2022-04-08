@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 
-namespace dotNetFastReport.Interface
+namespace ReportPublisher.Interface
 {
     public interface ITableDmo
     {

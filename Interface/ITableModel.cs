@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace dotNetFastReport.Interface
+namespace ReportPublisher.Interface
 {
     public interface ITableModel
     {

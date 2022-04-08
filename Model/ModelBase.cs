@@ -1,6 +1,6 @@
-﻿using dotNetFastReport.Interface;
+﻿using ReportPublisher.Interface;
 
-namespace dotNetFastReport.Model
+namespace ReportPublisher.Model
 {
    
     public abstract class ModelBase : ITableModel
