@@ -4,7 +4,7 @@ using System.Text;
 
 namespace dotNetFastReport.Model
 {
-    public class mots_dat_invoice_items : model_base
+    public class MotsInvoiceItems : ModelBase
 	{
    	    public string invoice_no { get; set; }
 		public string invoice_date { get; set; }

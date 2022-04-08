@@ -4,7 +4,7 @@ using System.Text;
 
 namespace dotNetFastReport.Model
 {
-	public class report_datas : model_base
+	public class ReportDatas : ModelBase
 	{
 		public int id { get; set; }
 		public string report_name { get; set; }

@@ -6,11 +6,11 @@ using dotNetFastReport.Interface;
 
 namespace dotNetFastReport.Dmo
 {
-    public class mots_dat_invoice_dmo : ITableDmo
+    public class MotsInvoiceDmo : ITableDmo
     {
         private readonly DataTable _dataTable;
 
-        public mots_dat_invoice_dmo()
+        public MotsInvoiceDmo()
         {
             _dataTable = new DataTable();
         }

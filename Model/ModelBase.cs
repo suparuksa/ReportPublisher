@@ -3,7 +3,7 @@
 namespace dotNetFastReport.Model
 {
    
-    public abstract class model_base : ITableModel
+    public abstract class ModelBase : ITableModel
     {
         public abstract object[] GetItemValue();
 

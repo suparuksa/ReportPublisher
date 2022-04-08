@@ -6,7 +6,7 @@ using dotNetFastReport.Interface;
 
 namespace dotNetFastReport.Database
 {
-    public partial class DataSetCreator<T> where T : model_base
+    public partial class DataSetCreator<T> where T : ModelBase
     {
         private readonly DataSet _reportDataSet;
         private readonly ITableDmo _reportDmo;

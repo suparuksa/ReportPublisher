@@ -13,14 +13,8 @@ namespace dotNetFastReport
 
     class Program
     {
-        private static string outFolder = @"..\..\..\out\";
-        private static string inFolder = @"..\..\..\in\";
-
-        static Program()
-        {
-            inFolder = Utils.FindDirectory("in");
-            outFolder = Directory.GetParent(inFolder).FullName + "\\out";
-        }
+       // private readonly string outFolder = @"..\..\..\out\";
+        //private readonly string inFolder = @"..\..\..\in\";
 
         static void Main(string[] args)
         {
@@ -28,10 +22,13 @@ namespace dotNetFastReport
             Console.WriteLine("Welcome! Press any key to procced...");
             Console.ReadKey();
 
+            var inFolder = Utils.FindDirectory("in");
+            var outFolder = Directory.GetParent(inFolder).FullName + "\\out";
+
             Report report = new Report();
             try
             {
-                var _reportdatasetcreator = new DataSetCreator<mots_dat_invoice_items>(new mots_dat_invoice_items_dmo());
+                var _reportdatasetcreator = new DataSetCreator<MotsInvoiceItems>(new MotsInvoiceItemsDmo());
                 var dataSet = _reportdatasetcreator.CreateReportDataSet();
 
                 report.Load($@"{inFolder}\mots_frm_invoice_items.frx");
