@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<mots_invoice>
+    <!--title-->
+    <invoice_no>IV220000000001</invoice_no>
+    <invoice_date>16/03/2022</invoice_date>
+    <ref1>xxxxxxxxxxxxxxxxxxxx</ref1>
+    <ref2>xxxxxxxxxxxxxxxxxxxx</ref2>
+    <due_date>30/03/2022</due_date>
+    <!--airline-->
+    <airline_company>Thai Airways International Public Company Limited</airline_company>
+    <airline_branch>Head Office</airline_branch>
+    <airline_taxid>010753700175</airline_taxid>
+    <airline_telno>02-283-1567</airline_telno>
+    <airline_address>89 Vibhavadi Rangsit Road, Chatuchak, Bangkok 10900</airline_address>
+    <!--detail-->
+    <detail_item>ค่าธรรมเนียมการท่องเที่ยว สำหรับเที่ยวบิน TG001 – 01/01/2022 จำนวน 1,000 คน</detail_item>
+    <detail_item_price>300,000</detail_item_price>
+    <detail_total_baht>สามแสนบาทถ้วน</detail_total_baht>
+    <detail_total_price>300,000</detail_total_price>
+</mots_invoice>
