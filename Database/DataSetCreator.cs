@@ -20,8 +20,9 @@ namespace ReportPublisher.Database
         public DataSet CreateReportDataSet()
         {
            var _reportDataTable = _reportDmo.GetDataTable();
-            
-            var connection_string = @"Server=SPBNB\SQL2019DEV;Database=develop;Trusted_Connection=True;";
+
+            //var connection_string = @"Server=SPBNB\SQL2019DEV;Database=develop;Trusted_Connection=True;";
+            var connection_string = @"Server=202.139.215.244;Database=MOTSDB;User Id=motswebapi;Password=@dm1n@MOTS1234!;";
             using (var sqlconnect = new SqlConnection(connection_string))
             {
 

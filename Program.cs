@@ -25,10 +25,10 @@ namespace ReportPublisher
             Report report = new Report();
             try
             {
-                var _reportdatasetcreator = new DataSetCreator<MotsInvoiceItems>(new MotsInvoiceItemsDmo());
+                var _reportdatasetcreator = new DataSetCreator<Invoices>(new InvoicesDmo());
                 var dataSet = _reportdatasetcreator.CreateReportDataSet();
 
-                report.Load($@"{inFolder}\mots_frm_invoice_items.frx");
+                report.Load($@"{inFolder}\mots_frm_invoice.frx");
                 report.RegisterData(dataSet);
                 report.Prepare();
 
